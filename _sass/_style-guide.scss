@@ -1,0 +1,45 @@
+.style-guide {
+  $color: rgb(0, 26, 255);
+  border-bottom: 1px solid $color;
+  color: $color;
+  font-family: monospace;
+  margin: 1em 0 2em;
+  &::before {
+    display: inline-block;
+    font-size: 1rem;
+    text-decoration: none;
+    width: 5rem;
+  }
+  a {
+    color: inherit;
+  }
+}
+
+h1.style-guide {
+  border-bottom: none;
+  counter-reset: style-guide-h2;
+  text-align: center;
+}
+
+h2.style-guide {
+  counter-increment: style-guide-h2;
+  counter-reset: style-guide-h3;
+  &::before {
+    content: counter(style-guide-h2);
+  }
+}
+
+h3.style-guide {
+  counter-increment: style-guide-h3;
+  counter-reset: style-guide-h4;
+  &::before {
+    content: counter(style-guide-h2) '.' counter(style-guide-h3);
+  }
+}
+
+h4.style-guide {
+  counter-increment: style-guide-h4;
+  &::before {
+    content: counter(style-guide-h2) '.' counter(style-guide-h3) '.' counter(style-guide-h4);
+  }
+}
