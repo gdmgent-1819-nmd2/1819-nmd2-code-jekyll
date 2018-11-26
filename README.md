@@ -1,8 +1,8 @@
 New Media Design II 2018-2019
 =============================
 
-Opdracht iRent
---------------
+Jekyll voorbeeld
+----------------
 
 ### Installatie kloon
 
@@ -12,10 +12,16 @@ PS> git clone «repositorynaam» «mapnaam»
 PS> c «mapnaam»
 ```
 
-### Updaten vna
+### Updaten van de Bundle
 
 ```
 PS> c «mapnaam»
 PS> bundle update
+```
+
+### Starten van Jekyll
+
+```
+PS> c «mapnaam»
 PS> bundle exec jekyll serve
 ```
